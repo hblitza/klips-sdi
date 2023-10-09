@@ -1,11 +1,16 @@
 version: 2
 updates:
   - package-ecosystem: "npm"
-    directory: "./easy-to-use-api/klips-chart-api"
+    directory: "/"
     schedule:
       interval: "daily"
       time: "04:00"
       timezone: "Europe/Berlin"
     open-pull-requests-limit: 10
-    labels:
-      - npm dependencies
+    groups:
+      - name: "chart-api"
+        directory: "./easy-to-use-api/klips-chart-api"
+      - name: "video-api"
+        directory: "./easy-to-use-api/klips-timelapse-video-api"
+      - name: "url-generator"
+        directory: "./easy-to-use-api/klips-url-generator"
